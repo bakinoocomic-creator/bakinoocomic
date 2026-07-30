@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BakinooComic | Comic Art & Illustrations</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#111;
+    color:white;
+    line-height:1.6;
+}
+
+header{
+    background:linear-gradient(135deg,#ff5f00,#ffcc00);
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-family:'Bangers',cursive;
+    font-size:2.6rem;
+    letter-spacing:2px;
+    color:#111;
+}
+
+nav a{
+    text-decoration:none;
+    color:#111;
+    font-weight:bold;
+    margin-left:25px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:white;
+}
+
+.hero{
+    height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:url("images/hero.jpg") center/cover;
+    position:relative;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.6);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+}
+
+.hero h1{
+    font-family:'Bangers',cursive;
+    font-size:5rem;
+    letter-spacing:4px;
+    color:#ffcc00;
+}
+
+.hero p{
+    font-size:1.3rem;
+    margin:25px 0;
+}
+
+.button{
+    display:inline-block;
+    background:#ff5f00;
+    color:white;
+    padding:15px 35px;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#ffcc00;
+    color:#111;
+}
+
+section{
+    padding:80px 8%;
+}
+
+section h2{
+    text-align:center;
+    font-family:'Bangers',cursive;
+    color:#ffcc00;
+    font-size:3rem;
+    margin-bottom:40px;
+}
+
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:1.1rem;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.art{
+    background:#222;
+    border-radius:12px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.art:hover{
+    transform:translateY(-8px);
+}
+
+.art img{
+    width:100%;
+    display:block;
+}
+
+.art h3{
+    padding:15px;
+    text-align:center;
+}
+
+.contact{
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#000;
+    color:#888;
+}
+
+.socials a{
+    color:#ffcc00;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">BakinooComic</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Comic Art That Tells Stories</h1>
+
+<p>
+Welcome to BakinooComic – the home of original comic art,
+illustrations, character designs, and graphic storytelling.
+Every panel is created with passion and imagination.
+</p>
+
+<a href="#gallery" class="button">View My Artwork</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2>About BakinooComic</h2>
+
+<div class="about">
+
+<p>
+I'm an independent comic artist creating dynamic
+illustrations, memorable characters, and exciting visual stories.
+Inspired by manga, western comics, and fantasy worlds,
+each piece combines expressive artwork with cinematic storytelling.
+
+Whether you're looking for comic pages, concept art,
+or original illustrations, this is where creativity comes alive.
+</p>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2>Featured Artwork</h2>
+
+<div class="gallery">
+
+<div class="art">
+<img src="images/Bakinoo2.jpg" alt="Comic Artwork">
+<h3>Original Comic Page</h3>
+</div>
+
+<div class="art">
+<img src="images/art2.jpg" alt="Character Design">
+<h3>Character Design</h3>
+</div>
+
+<div class="art">
+<img src="images/art3.jpg" alt="Illustration">
+<h3>Fantasy Illustration</h3>
+</div>
+
+<div class="art">
+<img src="images/art4.jpg" alt="Comic Cover">
+<h3>Comic Cover</h3>
+</div>
+
+<div class="art">
+<img src="images/art5.jpg" alt="Action Scene">
+<h3>Action Scene</h3>
+</div>
+
+<div class="art">
+<img src="images/art6.jpg" alt="Sketches">
+<h3>Sketch Collection</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Let's Connect</h2>
+
+<div class="contact">
+
+<p>
+Interested in commissions, collaborations, or simply want to follow my work?
+</p>
+
+<br>
+
+<a href="mailto:you@example.com" class="button">Email Me</a>
+
+<br><br>
+
+<div class="socials">
+<a href="#">Instagram</a> |
+<a href="#">Facebook</a> |
+<a href="#">X</a> |
+<a href="#">YouTube</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 BakinooComic. All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
