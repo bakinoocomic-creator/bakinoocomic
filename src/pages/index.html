@@ -3,21 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BakinooComic | Comic Art & Illustrations</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Bakinoocomic | Comic Creator</title>
 
 <style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Oswald:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+
 .dropbtn {
   background-color: #CC0000;
   color: white;
@@ -53,117 +51,9 @@ img {
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#111;
-    color:white;
-    line-height:1.6;
-}
 
-header{
-    background:linear-gradient(135deg,#ff5f00,#ffcc00);
-    padding:5px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:left;
-}
-
-.logo{
-    font-family:'Bangers',cursive;
-    font-size:2.6rem;
-    letter-spacing:2px;
-    color:#111;
-}
-
-nav a{
-    text-decoration:none;
-    color:#111;
-    font-weight:bold;
-    margin-left:25px;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:white;
-}
-
-.hero{
-    height:90vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    background:url("images/hero.jpg") center/cover;
-    position:relative;
-}
-
-.hero:before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.6);
-}
-
-.hero-content{
-    position:relative;
-    z-index:1;
-    max-width:850px;
-}
-
-.hero h1{
-    font-family:'Bangers',cursive;
-    font-size:5rem;
-    letter-spacing:4px;
-    color:#ffcc00;
-}
-
-.hero p{
-    font-size:1.3rem;
-    margin:25px 0;
-}
-
-.button{
-    display:inline-block;
-    background:#ff5f00;
-    color:white;
-    padding:15px 35px;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.button:hover{
-    background:#ffcc00;
-    color:#111;
-}
-
-section{
-    padding:80px 8%;
-}
-
-section h2{
-    text-align:center;
-    font-family:'Bangers',cursive;
-    color:#ffcc00;
-    font-size:3rem;
-    margin-bottom:40px;
-}
-
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    font-size:1.1rem;
-}
-
-.microcast{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    font-size:1.1rem;
-}
-
+html {
+    scroll-behavior: smooth;
 }
 
 .today{
@@ -173,57 +63,468 @@ section h2{
     font-size:1.1rem;
 }
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+body {
+    background: #111;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    overflow-x: hidden;
 }
 
-.art{
-    background:#222;
-    border-radius:12px;
-    overflow:hidden;
-    transition:.3s;
+/* =========================
+   HEADER
+========================= */
+
+header {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at center, rgba(190,0,0,.45), transparent 45%),
+        linear-gradient(135deg, #050505, #1c1c1c 50%, #080808);
 }
 
-.art:hover{
-    transform:translateY(-8px);
+/* Comic halftone pattern */
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .12;
+
+    background-image:
+        radial-gradient(#fff 1px, transparent 1px);
+
+    background-size: 12px 12px;
 }
 
-.art img{
-    width:100%;
-    display:block;
+.hero {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
 }
 
-.art h3{
-    padding:15px;
-    text-align:center;
+.hero .small-title {
+    font-size: 22px;
+    letter-spacing: 8px;
+    color: #ddd;
+    text-transform: uppercase;
 }
 
-.contact{
-    text-align:center;
+.hero h1 {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(90px, 15vw, 220px);
+    letter-spacing: 8px;
+    line-height: .8;
+
+    color: #d71920;
+
+    text-shadow:
+        6px 6px 0 #fff,
+        12px 12px 0 #000;
 }
 
-footer{
-    text-align:center;
-    padding:30px;
-    background:#000;
-    color:#888;
+.hero p {
+    margin-top: 35px;
+    font-size: 24px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
 }
 
-.socials a{
-    color:#ffcc00;
-    text-decoration:none;
-    margin:0 10px;
+/* POW burst */
+
+.pow {
+    position: absolute;
+    right: 8%;
+    top: 15%;
+    background: #ffd400;
+    color: #000;
+    font-family: 'Bangers', cursive;
+    font-size: 48px;
+    padding: 30px;
+    transform: rotate(12deg);
+    clip-path: polygon(
+        50% 0%, 61% 23%, 85% 5%,
+        76% 32%, 100% 40%, 75% 50%,
+        92% 73%, 65% 67%, 55% 100%,
+        43% 73%, 12% 90%, 25% 61%,
+        0% 50%, 26% 38%, 10% 12%,
+        38% 25%
+    );
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 25px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Bangers', cursive;
+    font-size: 38px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e21b23;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #e21b23;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+section {
+    padding: 100px 7%;
+}
+
+.section-title {
+    font-family: 'Bangers', cursive;
+    font-size: 70px;
+    letter-spacing: 3px;
+    color: #e21b23;
+    text-shadow: 4px 4px #fff;
+    margin-bottom: 50px;
+}
+
+.intro {
+    max-width: 800px;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+/* =========================
+   COMIC SHOWCASE
+========================= */
+
+.comics {
+    background: #e21b23;
+    position: relative;
+}
+
+.comics .section-title {
+    color: #fff;
+    text-shadow: 4px 4px #000;
+}
+
+.comic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.comic-card {
+    background: #111;
+    border: 6px solid #fff;
+    box-shadow: 12px 12px 0 #000;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.comic-card:hover {
+    transform: translateY(-12px) rotate(-1deg);
+}
+
+.comic-image {
+    height: 350px;
+    background:
+        linear-gradient(135deg, #333, #777);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bangers', cursive;
+    font-size: 45px;
+    color: #fff;
+    text-shadow: 3px 3px #000;
+}
+
+.comic-card:nth-child(2) .comic-image {
+    background: linear-gradient(135deg, #111, #9c1118);
+}
+
+.comic-card:nth-child(3) .comic-image {
+    background: linear-gradient(135deg, #555, #111);
+}
+
+.comic-info {
+    padding: 25px;
+}
+
+.comic-info h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 35px;
+}
+
+.comic-info p {
+    margin-top: 10px;
+    color: #bbb;
+}
+ 
+
+/* =========================
+   BLOG
+========================= */
+
+.blog {
+    background: #f2f2f2;
+    color: #111;
+}
+
+.blog .section-title {
+    color: #111;
+    text-shadow: 4px 4px #e21b23;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.blog-card {
+    background: white;
+    padding: 30px;
+    border: 5px solid #111;
+    box-shadow: 10px 10px 0 #e21b23;
+}
+
+.blog-card span {
+    color: #e21b23;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.blog-card h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.blog-card p {
+    line-height: 1.7;
+    color: #444;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    background: #111;
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* =========================
+   PODCAST
+========================= */
+
+.podcast {
+    background:
+        linear-gradient(135deg, #050505, #242424);
+    text-align: center;
+}
+
+.podcast-box {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 30px;
+    border: 5px solid #e21b23;
+    background: rgba(0,0,0,.6);
+    box-shadow: 15px 15px 0 #e21b23;
+}
+
+.podcast-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.podcast h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 60px;
+}
+
+.podcast p {
+    max-width: 650px;
+    margin: 20px auto;
+    color: #bbb;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.listen {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 35px;
+    background: #e21b23;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 3px solid white;
+    transition: .3s;
+}
+
+.listen:hover {
+    background: white;
+    color: #111;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #e21b23;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image {
+    min-height: 600px;
+    background:
+        radial-gradient(circle, #777, #111);
+    border: 8px solid white;
+    box-shadow: 15px 15px 0 #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bangers', cursive;
+    font-size: 70px;
+    text-align: center;
+}
+
+.about-text h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 55px;
+}
+
+.about-text p {
+    margin-top: 20px;
+    line-height: 1.8;
+    font-size: 19px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    text-align: center;
+    background: #111;
+}
+
+.contact p {
+    color: #aaa;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 18px 45px;
+    background: #e21b23;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 3px solid white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 40px;
+    background: #050505;
+    text-align: center;
+    color: #777;
+}
+
+footer strong {
+    color: #e21b23;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 800px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .comic-grid,
+    .blog-grid,
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .pow {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 55px;
+    }
+
+    .hero h1 {
+        font-size: 100px;
+    }
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
+<!-- =========================
+     HERO
+========================= -->
+
+<header id="home">
+
+<nav>
 
 <div class="dropdown">
   <button class="dropbtn">Menu</button>
@@ -231,41 +532,104 @@ footer{
     <a href="#about">About</a>
     <a href="#today">WIP Today</a>
     <a href="https://Bakinoocomic.blogspot.com/" target="_blank">Blog
-    <a href="#gallery">Gallery</a>
+    <a href="#comics">Gallery</a>
     <a href="#microcast">Microcast</a>
     <a href="#contact">Contact</a>
   </div>
 </div>
-    
-<div class="logo"> </div>
-    <img src="/Images/Bakinoologo1.png" alt="Logo" width="200" height="70" style="float:right">
-</header>
 
-<section class="hero">
+    <div class="logo">BAKINOO<span>COMIC</span></div>
 
-<div class="hero-content">
-<h2>       Comic Art That Tells Stories</h2>
-    <img src="/Images/Bakinoologo.png" alt="Logo"width="200" height="200"><br>
-<p><h3>
-Welcome to BakinooComic – the home of original and traditional Cartoon, Comic art
-and illustrations. I'm on a mission to have art worthy of display at a Comic Con 
-in 2027. Join me on that journey. I have a Long way to go!</h3>
-</p>
+   
+</nav>
 
-</section>
+<div class="pow">POW!</div>
 
-<section id="microcast">
+<div class="hero">
 
-<h2> Microcast</h2>
-<p></p><h3>The Microcast is only 5 minutes long (As you may be like me and have a very short attention span).
-    Episodes are a mixture of content relating to Comic Art, Cartoons and illustrations with the occasional "Microplay" thrown in for good measure. 
-    Please leave a like or comment if you enyoyed it. </h3><br></p>
-<div class="gallery">
+    <div class="small-title">
+        Comic Creator • Artist • Storyteller
+    </div>
 
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/0340WD6AXfQgoijCbiv62n?utm_source=generator&si=b7a6b8a43e5b4b8d" width="100%" height="200" align="centre" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <h1>BAKINOO<br>COMIC</h1>
+
+    <p>
+        Welcome to the world of imagination
+    </p>
 
 </div>
+
+</header>
+
+
+<!-- =========================
+     COMICS
+========================= -->
+
+<section class="comics" id="comics">
+
+<h2 class="section-title">THE COMIC UNIVERSE</h2>
+
+<p class="intro">
+Welcome to the artwork of Bakinoocomic. Explore characters,
+worlds, monsters, heroes and stories created from imagination
+and brought to life on the page.
+</p>
+
+<br><br>
+
+<div class="comic-grid">
+
+    <article class="comic-card">
+        <div class="comic-image">
+            /*COMIC ART
+
+	<img src="/Images/Page3.jpg" alt="Comic Artwork" width="100" height="300">
+        </div>
+
+        <div class="comic-info">
+            <h3>PROJECT ONE</h3>
+            <p>
+                A glimpse into one of Bakinoocomic's latest comic creations.
+            </p>
+        </div>
+    </article>
+
+
+    <article class="comic-card">
+        <div class="comic-image">
+            HEROES
+        </div>
+
+        <div class="comic-info">
+            <h3>CHARACTERS</h3>
+            <p>
+                Meet the characters that inhabit the Bakinoocomic universe.
+            </p>
+        </div>
+    </article>
+
+
+    <article class="comic-card">
+        <div class="comic-image">
+            WORLDS
+        </div>
+
+        <div class="comic-info">
+            <h3>THE WORLDS</h3>
+            <p>
+                Strange places, dark cities and fantastic worlds.
+            </p>
+        </div>
+    </article>
+
+</div>
+
 </section>
+
+<! -- =============================
+	WIP
+========================= -->
 
     <section id="today">
 
@@ -276,13 +640,47 @@ in 2027. Join me on that journey. I have a Long way to go!</h3>
 </div>
 </section>
 
-<section id="about">
+<!-- =========================
+     PODCAST
+========================= -->
 
-<h2>About BakinooComic</h2>
+<section class="podcast" id="podcast">
 
-<div class="about">
+<h2 class="section-title">THE PODCAST</h2>
 
-<p><h3>
+<div class="podcast-box">
+
+    <div class="podcast-icon">🎙️</div>
+
+    <h3>THE MICROCAST</h3>
+
+
+<div class="gallery">
+
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/show/0340WD6AXfQgoijCbiv62n?utm_source=generator&si=b7a6b8a43e5b4b8d" width="100%" height="200" align="centre" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+<div class="about-container">
+
+  
+
+    <div class="about-text">
+
+        <h3>
+            THE CREATOR
+        </h3>
+
 I'm an independent cartoon, comic and illustration artist creating dynamic
 illustrations, memorable characters, and exciting visual stories.
 At least that's what Google told me when I searched for my name! <br><br>
@@ -290,83 +688,51 @@ Anyway, in reality I'm a 64 year old man who only started taking drawing serious
 Sharing this journey to have a table at a Comic Con in 2027 is my way of proving 
 you can achieve ANYTHING at ANY Age. If the Rolling Stones are still rocking in their 80's then
 I can fulfil my goal (and so can you). Watch me succedd (and fail repeatedly) through the Blog and the Microcast. 
-</h3>
-</p>
+
+
+
+    </div>
 
 </div>
 
 </section>
 
-<section id="gallery">
 
-<h2>Featured Artwork</h2>
+<!-- =========================
+     CONTACT
+========================= -->
 
-<div class="gallery">
+<section class="contact">
 
-<div class="art">
-<img src="/Images/Page3.jpg" alt="Comic Artwork" width="100" height="300">
-<h3>Drac IRL</h3>
-</div>
-
-<div class="art">
-<img src="/Images/WonderWomen.jpeg" alt="Character Design" width="100" height="300">
-<h3>Character Design</h3>
-</div>
-
-<div class="art">
-<img src="/Images/BruceLee.jpeg" alt="Illustration" width="100" height="300">
-<h3>Fantasy Illustration</h3>
-</div>
-
-<div class="art">
-<img src="/Images/Avengersvision.jpeg" alt="Comic Cover" width="100" height="300">
-<h3>Comic Cover</h3>
-</div>
-
-<div class="art">
-<img src="Images/action.jpg" alt="Action Scene" width="100" height="300">
-<h3>Action Scene</h3>
-</div>
-
-<div class="art">
-<img src="/Images/20260618_162306.jpg" alt="Sketches" width="100" height="300">
-<h3>Sketch Collection</h3>
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Let's Connect</h2>
-
-<div class="contact">
+<h2 class="section-title">
+    JOIN THE ADVENTURE
+</h2>
 
 <p>
-Interested in commissions, collaborations, or simply want to follow my work?
+    Follow the artwork. Discover the stories. Enter the world of Bakinoocomic.
 </p>
 
-<br>
-
-<a href="mailto:bakinoocomic@gmail.com" class="button">Email Me</a>
+<a href="mailto:bakinoocomic@gmail.com" class="contact-button">Email Me</a>
 
 <br><br>
 
 <div class="socials">
-<a href="https://instagram.com/bakinoocomic">Instagram</a> 
+<a href="https://instagram.com/bakinoocomic" class="contact-button">Instagram</a> 
 
-</div>
-
-</div>
 
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-© 2026 BakinooComic. All Rights Reserved. Revision 12
+    © 2026 <strong>Bakinoocomic</strong> — Comic Creator & Artist
 
 </footer>
 
 </body>
 </html>
+```
