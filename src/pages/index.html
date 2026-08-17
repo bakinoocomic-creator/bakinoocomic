@@ -16,6 +16,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+        .containerwip {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        
+        #text {
+            background: #222;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: left;
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
 .centercount {
   display: flex;
   justify-content: center;
@@ -866,21 +881,29 @@ and brought to life on the page.
 
 <h2 class="section-title">Work In Progress</h2>
 
-<div class="podcast-box">
+<div class="containerwip">
 
-    <div class="podcast-icon">&#10001</div>
+    <!-- Image loaded from a separate file -->
+    <img src="wip.jpg" alt="Comic artwork" width="300" height="200">
 
-    <h3>Today</h3>
-
-
-	
-<div class="gallery">
-
-	<p> Today I messing around with sketching and thought "Could i turn this into anything". Using Procreate, this came out. </p>
-<img src="Images/wip.jpg" alt="Work In Progress" width="300" height="200">
+    <!-- Text loaded from a separate file -->
+    <div id="text">
+        Loading text...
+    </div>
 
 </div>
-</div>
+
+<script>
+    fetch("text.txt")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("text").textContent = data;
+        })
+        .catch(error => {
+            document.getElementById("text").textContent =
+                "Unable to load the text.";
+        });
+</script>
 
 </section>
 
