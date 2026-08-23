@@ -1,0 +1,477 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bakinoocomic | Buy My Art</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    background: #181818;
+    border-bottom: 5px solid #e00000;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    text-shadow: 4px 4px 0 #e00000;
+}
+
+.tagline {
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 17px;
+}
+
+/* NAVIGATION */
+nav {
+    background: #050505;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #e00000;
+}
+
+/* HERO */
+.hero {
+    padding: 70px 20px;
+    text-align: center;
+    background:
+        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+        url("images/shop-background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 55px;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 0 #e00000;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 19px;
+    color: #ddd;
+}
+
+/* SHOP */
+.shop {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.shop-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.shop-title h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.shop-title p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* PRODUCTS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.product {
+    background: #1d1d1d;
+    border: 3px solid #333;
+    box-shadow: 8px 8px 0 #050505;
+    transition: .2s;
+}
+
+.product:hover {
+    transform: translateY(-6px);
+    border-color: #e00000;
+}
+
+.product-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    color: #bbb;
+    line-height: 1.5;
+}
+
+.price {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 18px 0;
+    color: #fff;
+}
+
+/* BUTTON */
+.buy-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: #e00000;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.buy-button:hover {
+    background: #ff2222;
+}
+
+/* INFO SECTION */
+.info-section {
+    background: #181818;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    max-width: 750px;
+    margin: auto;
+    color: #bbb;
+    line-height: 1.7;
+}
+
+/* COMMISSIONS */
+.commissions {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #222;
+    border: 3px solid #444;
+    text-align: center;
+}
+
+.commissions h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.commissions p {
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+footer {
+    background: #050505;
+    padding: 35px 20px;
+    text-align: center;
+    color: #777;
+}
+
+footer strong {
+    color: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .logo {
+        font-size: 34px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px 8px;
+    }
+
+    .shop-title h2 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Bakinoocomic
+    </div>
+
+    <div class="tagline">
+        Original Comic Art • Prints • Commissions
+    </div>
+
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="shop.html">Shop</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<section class="hero">
+
+    <h1>Own A Piece Of The Art</h1>
+
+    <p>
+        Original artwork, limited edition prints and comic-inspired
+        creations from Bakinoocomic.
+    </p>
+
+</section>
+
+<section class="shop">
+
+    <div class="shop-title">
+
+        <h2>Art For Sale</h2>
+
+        <p>
+            Take home something unique from the Bakinoocomic universe.
+        </p>
+
+    </div>
+
+    <div class="products">
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product">
+
+            <img
+                src="/Images/Super.jpg"
+                alt="Original comic artwork"
+                class="product-image"
+            >
+
+            <div class="product-info">
+
+                <h3>Superman Pen and Ink</h3>
+
+                <p>
+                    Pen and Ink Superman Drawing. Framed 6" x 4"
+                    Signed by the artist.
+                </p>
+
+                <div class="price">
+                    £85
+                </div>
+
+                <a href="YOUR-PAYPAL-LINK-HERE"
+                   class="buy-button">
+                    Buy Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product">
+
+            <img
+                src="images/artwork2.jpg"
+                alt="Comic art print"
+                class="product-image"
+            >
+
+            <div class="product-info">
+
+                <h3>Limited Edition Print</h3>
+
+                <p>
+                    High-quality art print on heavyweight
+                    comic-quality paper.
+                </p>
+
+                <div class="price">
+                    £25
+                </div>
+
+                <a href="YOUR-PAYPAL-LINK-HERE"
+                   class="buy-button">
+                    Buy Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product">
+
+            <img
+                src="images/artwork3.jpg"
+                alt="Signed comic print"
+                class="product-image"
+            >
+
+            <div class="product-info">
+
+                <h3>Signed Print</h3>
+
+                <p>
+                    Signed Bakinoocomic print.
+                    Limited availability.
+                </p>
+
+                <div class="price">
+                    £35
+                </div>
+
+                <a href="YOUR-PAYPAL-LINK-HERE"
+                   class="buy-button">
+                    Buy Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product">
+
+            <img
+                src="images/artwork4.jpg"
+                alt="Comic artwork"
+                class="product-image"
+            >
+
+            <div class="product-info">
+
+                <h3>Character Print</h3>
+
+                <p>
+                    A high-quality print featuring
+                    an original Bakinoocomic character.
+                </p>
+
+                <div class="price">
+                    £20
+                </div>
+
+                <a href="YOUR-PAYPAL-LINK-HERE"
+                   class="buy-button">
+                    Buy Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="info-section">
+
+    <h2>Original Art</h2>
+
+    <p>
+        Every original piece is drawn by hand and is a unique
+        piece of Bakinoocomic artwork. Originals are supplied
+        signed and carefully packaged for delivery.
+    </p>
+
+</section>
+
+
+<section class="commissions">
+
+    <h2>Want Something Made Just For You?</h2>
+
+    <p>
+        I also take commissions. If you'd like a custom comic
+        character, portrait, scene or piece of artwork,
+        get in touch and let's create something together.
+    </p>
+
+    <a href="contact.html" class="buy-button">
+        Request A Commission
+    </a>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 <strong>Bakinoocomic</strong> — All artwork rights reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
+```
